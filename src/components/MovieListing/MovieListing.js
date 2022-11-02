@@ -21,7 +21,7 @@ const MovieListing = () => {
     <div className="movie-wrapper">
       <div className="movie-list">
         <h2>Movies</h2>
-        <div className="movie-continer">{renderedMovies}</div>
+        <div className="movie-container">{renderedMovies}</div>
       </div>
     </div>
   );
