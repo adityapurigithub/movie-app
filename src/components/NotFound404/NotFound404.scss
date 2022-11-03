@@ -1,0 +1,10 @@
+@import "../../common/colors.scss";
+.page-404 {
+  color: $font-primary;
+  height: 100vh;
+  text-align: center;
+  background-image: url("../../images/err404.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

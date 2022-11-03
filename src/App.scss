@@ -1,15 +1,5 @@
 @import "../src/common/colors.scss";
 
-::-webkit-scrollbar,
-::-webkit-scrollbar:horizontal {
-  background-color: black;
-  width: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: aliceblue;
-  border-radius: 10px;
-}
-
 * {
   margin: 0;
   padding: 0;
