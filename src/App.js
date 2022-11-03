@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import NotFound404 from "./components/NotFound404/NotFound404";
 import "./App.scss";
+import MovieDetail from "./components/MovieDetail/MovieDetail";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/movie/:imdbId" element={<Home />} />
+            <Route path="/movie/:imdbID" element={<MovieDetail />} />
             <Route path="*" element={<NotFound404 />} />
           </Routes>
         </div>

@@ -2,7 +2,14 @@
 .card-item {
   background-color: $secondary-color;
   cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
+// .card-item:hover {
+//   transform: scale(102%);
+// }
 .card-top {
   height: 300px;
   img {

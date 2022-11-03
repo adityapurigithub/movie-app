@@ -4,8 +4,12 @@ import MovieCard from "../MovieCard/MovieCard";
 import "./MovieListing.scss";
 const MovieListing = () => {
   const movies = useSelector((state) => state.movies);
-  console.log(movies.Search);
-  let renderedMovies =
+  const series = useSelector((state) => state.series);
+  console.log(series);
+  let renderedMovies,
+    renderedSeries = "";
+  // movies to be rendered
+  renderedMovies =
     movies.Response === "True" ? (
       movies.Search.map((movie, index) => {
         return <MovieCard data={movie} />;
@@ -13,7 +17,21 @@ const MovieListing = () => {
     ) : (
       <>
         <div className="movie-err">
-          <h2>{movies.error}</h2>
+          <h2>{movies.Error}</h2>
+        </div>
+      </>
+    );
+
+  // shows to be rendered
+  renderedSeries =
+    series.Response === "True" ? (
+      series.Search.map((series, index) => {
+        return <MovieCard data={series} />;
+      })
+    ) : (
+      <>
+        <div className="movie-err">
+          <h2>{series.Error}</h2>
         </div>
       </>
     );
@@ -22,6 +40,10 @@ const MovieListing = () => {
       <div className="movie-list">
         <h2>Movies</h2>
         <div className="movie-container">{renderedMovies}</div>
+      </div>
+      <div className="show-list">
+        <h2>Shows</h2>
+        <div className="show-container">{renderedSeries}</div>
       </div>
     </div>
   );
