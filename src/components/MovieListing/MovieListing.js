@@ -5,7 +5,6 @@ import "./MovieListing.scss";
 const MovieListing = () => {
   const movies = useSelector((state) => state.movies);
   const series = useSelector((state) => state.series);
-  console.log(series);
   let renderedMovies,
     renderedSeries = "";
   // movies to be rendered
@@ -37,14 +36,20 @@ const MovieListing = () => {
     );
   return (
     <div className="movie-wrapper">
-      <div className="movie-list">
-        <h2>Movies</h2>
-        <div className="movie-container">{renderedMovies}</div>
-      </div>
-      <div className="show-list">
-        <h2>Shows</h2>
-        <div className="show-container">{renderedSeries}</div>
-      </div>
+      {Object.keys(movies || series).length === 0 ? (
+        <div className="loading">Loading...</div>
+      ) : (
+        <>
+          <div className="movie-list">
+            <h2>Movies</h2>
+            <div className="movie-container">{renderedMovies}</div>
+          </div>
+          <div className="show-list">
+            <h2>Shows</h2>
+            <div className="show-container">{renderedSeries}</div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

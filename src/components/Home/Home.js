@@ -12,7 +12,7 @@ const Home = () => {
   useEffect(() => {
     dispatch(aysncFetchMovies());
 
-    //now dispatching series -action
+    //also now dispatching series -action
     dispatch(aysncFetchSeries());
   }, [dispatch]);
   return (
