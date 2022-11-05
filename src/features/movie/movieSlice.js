@@ -8,13 +8,12 @@ const initialState = {
   selectedMovieOrShow: {},
 };
 
-const movieSearch = "harry";
 // createAsyncThunk("slice_name/function_name",()=>{})
 export const aysncFetchMovies = createAsyncThunk(
   "movies/aysncFetchMovies",
-  async () => {
+  async (text) => {
     const response = await movieApi.get(
-      `?apiKey=${APIkey}&s=${movieSearch}&type=movie`
+      `?apiKey=${APIkey}&s=${text}&type=movie`
     );
 
     console.log("Response API", response);
@@ -23,13 +22,12 @@ export const aysncFetchMovies = createAsyncThunk(
 );
 
 //for series..
-const seriesSearch = "money";
 // createAsyncThunk("slice_name/function_name",()=>{})
 export const aysncFetchSeries = createAsyncThunk(
   "movies/aysncFetchSeries",
-  async () => {
+  async (text) => {
     const response = await movieApi.get(
-      `?apiKey=${APIkey}&s=${seriesSearch}&type=series`
+      `?apiKey=${APIkey}&s=${text}&type=series`
     );
 
     console.log("Response API", response);

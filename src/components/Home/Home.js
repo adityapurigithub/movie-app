@@ -8,12 +8,15 @@ import {
 import MovieListing from "../MovieListing/MovieListing";
 
 const Home = () => {
+  const movieText = "Harry";
+  const showText = "heist";
+
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(aysncFetchMovies());
+    dispatch(aysncFetchMovies(movieText));
 
     //also now dispatching series -action
-    dispatch(aysncFetchSeries());
+    dispatch(aysncFetchSeries(showText));
   }, [dispatch]);
   return (
     <div>

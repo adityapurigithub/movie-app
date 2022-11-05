@@ -1,5 +1,7 @@
 @import "../../common/colors.scss";
-
+.movie-wrapper {
+  min-height: 100vh;
+}
 .movie-list,
 .show-list {
   margin: 20px 0;
