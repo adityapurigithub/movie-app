@@ -8,12 +8,13 @@
     margin-bottom: 10px;
   }
 }
-.movie-container,
-.show-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 10px;
-}
+// //now using slick slider css so commenting this
+// .movie-container,
+// .show-container {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+//   grid-gap: 10px;
+// }
 .loading {
   color: $font-primary;
   height: 100vh;
