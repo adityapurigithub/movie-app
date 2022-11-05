@@ -1,12 +1,14 @@
 @import "../../common/colors.scss";
 
 .movie-section {
+  min-height: 100vh;
   display: flex;
   justify-content: space-evenly;
   padding: 40px 0;
   color: $font-primary;
   font-weight: 400;
 }
+
 .movie-rating {
   padding-left: 3px;
   margin-top: 20px;
@@ -41,5 +43,17 @@
   margin-left: 30px;
   img {
     box-shadow: 0px 0px 20px 1px rgb(217, 205, 205);
+  }
+}
+@media screen and(max-width:768px) {
+  .movie-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .left {
+    width: 90%;
+  }
+  .right {
+    display: none;
   }
 }

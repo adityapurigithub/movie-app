@@ -46,3 +46,27 @@
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0px 15px;
+  }
+  .logo {
+    font-size: 15px;
+  }
+  .search-bar {
+    width: 250px;
+    form {
+      width: 100%;
+      input {
+        font-size: 11px;
+      }
+      button {
+        width: 60px;
+        padding: 0 2px;
+      }
+    }
+  }
+  .user-image {
+    margin-left: 5px;
+  }
+}
