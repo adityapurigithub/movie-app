@@ -27,7 +27,7 @@ const Header = () => {
 
   return (
     <div className="header">
-      <Link to="/">
+      <Link to="/home">
         <div className="logo">Movie App</div>
       </Link>
       <div className="search-bar">
